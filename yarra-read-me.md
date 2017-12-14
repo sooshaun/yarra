@@ -113,6 +113,10 @@ $ git remote -v
 $ hub create sooshaun/yarra
 
 
+
+
+
+
 > if you are having the branch, you want to merge the branch to master
 $ git checkout master
 $ git merge deploy
