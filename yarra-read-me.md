@@ -97,5 +97,38 @@ console.log('process.env.REACT_APP_API_URL', process.env.REACT_APP_API_URL)
 > create web > .env.production and paste the url onto it
 REACT_APP_API_URL = https://yarra-api-lcicsajxzj.now.sh/
 
-- to compile all your code, run the below. It will create a build folder
+- to compile all your code, run the below. It will create a "build" folder
 $ yarn build
+
+## NETLIFY
+- installling hub source https://github.com/github/hub
+$ brew install hub
+
+> After git clone, you want to change to your own github
+$ git remote add origin git@github.com:sooshaun/yarra.git
+
+- then use the below to check the github station
+$ git remote -v
+
+$ hub create sooshaun/yarra
+
+
+> if you are having the branch, you want to merge the branch to master
+$ git checkout master
+$ git merge deploy
+$ hub remote add bc sooshaun/yarra
+
+
+
+
+- At Netlify website
+- When you are at Basic build Settings, key in the below to the 
+> Build command
+cd web && npm install && npm run build
+> Publish Directory
+web/build
+> then click on deployment
+
+
+
+$
