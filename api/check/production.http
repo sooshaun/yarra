@@ -1,0 +1,48 @@
+@base_url = https://yarra-api-lcicsajxzj.now.sh
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlhcnJhY29kZXJAY29kZXJhY2FkZW15LmVkdS5hdSIsImlhdCI6MTUxMzIxMjI3MiwiZXhwIjoxNTEzODE3MDcyLCJzdWIiOiI1YTMxYzk3MDRiNGE4NDAwNzE2NjNiYTgifQ.ug386Eax9XDMT0TRS0QpSCtA7XMvZROumWxRZ5SdIi4
+
+###
+
+GET {{base_url}}/products
+
+####
+POST {{base_url}}/products
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "brandName": "Kmart",
+    "name": "Hat"
+}
+
+###
+
+POST {{base_url}}/products
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "brandName": "Two Dollar",
+    "name": "Sun glasses"
+}
+
+### Register
+POST {{base_url}}/auth/register
+Content-Type: application/json
+
+{
+  "email": "yarracoder@coderacademy.edu.au",
+  "firstName": "Coder",
+  "lastName": "Yarra",
+  "password": "password123"
+}
+
+### Sign in
+POST {{base_url}}/auth
+Content-Type: application/json
+
+{
+  "email": "yarracoder@coderacademy.edu.au",
+  "password": "password123"
+}
+

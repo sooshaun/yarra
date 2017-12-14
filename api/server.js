@@ -1,3 +1,8 @@
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config()
+}
+
+
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
@@ -27,11 +32,11 @@ server.use((error, req, res, next) => {
 })
 
 // Start the server
-server.listen(7000, (error) => {
+server.listen(7100, (error) => {
   if (error) {
     console.error('Error starting', error)
   }
   else {
-    console.log('Server started at http://localhost:7000/')
+    console.log('Server started at http://localhost:7100/')
   }
 })
